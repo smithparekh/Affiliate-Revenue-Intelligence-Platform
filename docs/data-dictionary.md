@@ -91,3 +91,51 @@ One row represents one affiliate conversion/order event.
 | return_status | Return status |
 | customer_lifetime_value | Customer lifetime value |
 | previous_orders_count | Number of previous orders |
+
+
+## amazon_products_catalog_clean
+
+### Grain
+
+One row represents one product.
+
+### Primary Key
+
+`product_asin`
+
+### Row Count
+
+64
+
+### Column Count
+
+24
+
+### Columns
+
+| Column | Description |
+|---|---|
+| product_asin | Unique product identifier |
+| product_title | Product name |
+| brand | Product brand |
+| category | Product category |
+| subcategory | Product subcategory |
+| price | Current product price |
+| original_price | Original product price before discount |
+| discount_percentage | Discount percentage |
+| rating | Product rating |
+| review_count | Number of product reviews |
+| prime_eligible | Whether the product is Prime eligible |
+| bestseller_rank | Product bestseller ranking |
+| release_date | Product release date |
+| dimensions | Product dimensions |
+| weight | Product weight |
+| color_options | Available product colors |
+| size_options | Available product sizes |
+| commission_rate | Affiliate commission rate |
+| affiliate_fee_structure | Affiliate fee structure |
+| product_description | Product description |
+| key_features | Main product features |
+| target_audience | Intended customer audience |
+| seasonal_trend | Seasonal demand pattern |
+| inventory_status | Current inventory status |
