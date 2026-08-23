@@ -139,3 +139,60 @@ One row represents one product.
 | target_audience | Intended customer audience |
 | seasonal_trend | Seasonal demand pattern |
 | inventory_status | Current inventory status |
+
+
+## user_behavior_analytics
+
+### Grain
+
+One row represents one page-level behavior event within a user session.
+
+### Primary Key
+
+No single source primary key is present.
+
+A practical event key will need to be created during the staging/modeling layer.
+
+### Session Key
+
+`session_id`
+
+### User Key
+
+`user_id`
+
+### Row Count
+
+308
+
+### Column Count
+
+21
+
+### Columns
+
+| Column | Description |
+|---|---|
+| session_id | Identifier of the user session |
+| user_id | Identifier of the user |
+| timestamp | Timestamp of the page interaction |
+| page_url | URL/page visited |
+| page_title | Page title |
+| page_type | Type of page |
+| time_on_page_seconds | Time spent on the page |
+| scroll_depth_percentage | Percentage of page scrolled |
+| bounce_rate | Bounce rate indicator/value |
+| exit_rate | Exit rate indicator/value |
+| page_views_in_session | Number of page views in the session |
+| session_duration_minutes | Session duration |
+| traffic_source | Source of traffic |
+| device_type | Device category |
+| browser | Browser |
+| operating_system | Operating system |
+| screen_resolution | Screen resolution |
+| geographic_location | User geographic location |
+| new_vs_returning | New or returning visitor |
+| user_engagement_score | Engagement score |
+| conversion_funnel_stage | Funnel stage at the time of the event |
+
+
