@@ -196,3 +196,57 @@ A practical event key will need to be created during the staging/modeling layer.
 | conversion_funnel_stage | Funnel stage at the time of the event |
 
 
+
+## Source Relationships
+
+### Clicks → Conversions
+
+`amazon_affiliate_clicks.click_id`
+→ `amazon_affiliate_conversions.click_id`
+
+Relationship:
+
+One click can have zero, one, or multiple conversion events.
+
+Observed in source data:
+
+- 200 click records
+- 150 conversion records
+- 130 distinct converted click IDs
+
+### Clicks → Products
+
+`amazon_affiliate_clicks.product_asin`
+→ `amazon_products_catalog_clean.product_asin`
+
+All 200 click records have a matching product.
+
+### Conversions → Products
+
+`amazon_affiliate_conversions.product_asin`
+→ `amazon_products_catalog_clean.product_asin`
+
+All 150 conversion records have a matching product.
+
+### Clicks → User Behavior
+
+`amazon_affiliate_clicks.session_id`
+→ `user_behavior_analytics.session_id`
+
+Observed in source data:
+
+- 200 click records
+- 110 clicks have matching sessions
+- 90 clicks do not have matching behavior records
+
+Missing behavior records will be preserved during modeling rather than dropping the corresponding click events.
+
+### User Behavior Grain
+
+`user_behavior_analytics` contains multiple records per session.
+
+Therefore:
+
+`session_id` is not a primary key.
+
+One session can contain multiple page-behavior events.
