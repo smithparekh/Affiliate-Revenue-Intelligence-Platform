@@ -250,3 +250,37 @@ Therefore:
 `session_id` is not a primary key.
 
 One session can contain multiple page-behavior events.
+
+
+
+## Product Data Quality Finding
+
+The source product catalog contains 64 rows and 56 unique `product_asin`
+values.
+
+Eight ASIN values are associated with multiple different product titles.
+
+Example:
+
+`B07DEF890`
+- Anker Portable Charger PowerCore 10000
+- Arlo Pro 4 Security Camera
+
+Therefore, `product_asin` cannot be treated as a unique product key in
+the warehouse.
+
+### Modeling Decision
+
+The raw source data will remain unchanged.
+
+The analytical product dimension will use a warehouse-generated
+surrogate key:
+
+`product_key`
+
+The source ASIN will be retained as:
+
+`source_asin`
+
+This allows the warehouse to preserve all source records while
+providing a stable internal key for analytical joins.
