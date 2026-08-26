@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: dim_product
+    description: "Product dimension containing one warehouse record per source product record."
+
+    columns:
+      - name: product_key
+        description: "Unique warehouse-generated product key."
+        data_tests:
+          - not_null
+          - unique
+
+      - name: source_asin
+        description: "Source product identifier from the original product catalog."
+        data_tests:
+          - not_null
+
+      - name: product_title
+        description: "Product title."
+        data_tests:
+          - not_null
+
+      - name: price
+        description: "Current product price."
+        data_tests:
+          - not_null
+
+      - name: commission_rate
+        description: "Affiliate commission rate."
+        data_tests:
+          - not_null
