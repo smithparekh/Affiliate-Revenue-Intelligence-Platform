@@ -110,3 +110,31 @@ models:
 
 
       
+  - name: fct_page_behavior
+    description: "Fact table containing one row per page-level behavior event within a session."
+
+    columns:
+      - name: session_id
+        description: "Identifier of the user session."
+        data_tests:
+          - not_null
+
+      - name: user_id
+        description: "Identifier of the user."
+        data_tests:
+          - not_null
+
+      - name: event_at
+        description: "Timestamp of the page behavior event."
+        data_tests:
+          - not_null
+
+      - name: page_url
+        description: "URL associated with the page behavior event."
+        data_tests:
+          - not_null
+
+      - name: page_type
+        description: "Type of page visited."
+        data_tests:
+          - not_null
