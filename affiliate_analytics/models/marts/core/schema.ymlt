@@ -79,8 +79,9 @@ models:
         description: "Affiliate click associated with the conversion. Null when the source conversion has no click attribution."
         data_tests:
           - relationships:
-              to: ref('fct_clicks')
-              field: click_id
+              arguments:
+                to: ref('fct_clicks')
+                field: click_id
 
       - name: user_id
         description: "User associated with the conversion."
