@@ -56,3 +56,45 @@ The initial dimension will represent the current product state.
 
 SCD Type 2 will be considered later when historical product changes are
 introduced into the production-scale dataset.
+
+
+## dim_customer
+
+### Grain
+
+One row represents one unique user/customer across all available source systems.
+
+### Primary Key
+
+`customer_key`
+
+### Business Key
+
+`user_id`
+
+### Customer Universe
+
+The customer dimension will be constructed from the union of users
+appearing in:
+
+- affiliate clicks
+- affiliate conversions
+- user behavior events
+
+This prevents customers that appear in only one source system from being lost.
+
+### Initial Attributes
+
+- customer_key
+- user_id
+- first_seen_at
+- last_seen_at
+- customer_lifetime_value
+- previous_orders_count
+
+### Modeling Decision
+
+Event-level and session-level attributes such as `customer_type`,
+`new_vs_returning`, `device_type`, and `browser` will remain in the
+appropriate fact/event models because their values may vary across
+events and sources.
