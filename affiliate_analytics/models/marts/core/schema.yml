@@ -145,3 +145,28 @@ models:
 
 
     
+  - name: dim_customer
+    description: "Customer dimension containing one row per unique user across all source systems."
+
+    columns:
+      - name: customer_key
+        description: "Unique warehouse-generated customer key."
+        data_tests:
+          - not_null
+          - unique
+
+      - name: user_id
+        description: "Business identifier for the customer."
+        data_tests:
+          - not_null
+          - unique
+
+      - name: first_seen_at
+        description: "Earliest known customer activity timestamp."
+        data_tests:
+          - not_null
+
+      - name: last_seen_at
+        description: "Most recent known customer activity timestamp."
+        data_tests:
+          - not_null
