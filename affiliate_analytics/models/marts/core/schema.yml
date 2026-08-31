@@ -201,3 +201,33 @@ models:
         description: "Name of the day."
         data_tests:
           - not_null
+
+
+  - name: int_clicks_enriched
+    description: "Click events enriched with warehouse product attributes."
+
+    columns:
+      - name: click_id
+        description: "Unique affiliate click."
+        data_tests:
+          - not_null
+          - unique
+
+      - name: product_key
+        description: "Warehouse product key resolved from the product dimension."
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_product')
+                field: product_key
+
+      - name: user_id
+        description: "User associated with the click."
+        data_tests:
+          - not_null
+
+      - name: clicked_at
+        description: "Timestamp of the click."
+        data_tests:
+          - not_null
