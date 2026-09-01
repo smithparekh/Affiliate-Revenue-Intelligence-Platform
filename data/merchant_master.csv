@@ -1,0 +1,101 @@
+merchant_id,merchant_name,merchant_category,country,commission_rate,status
+MER0001,TechWorld 1,Electronics,UK,0.035,Active
+MER0002,BeautyMart 2,Electronics,US,0.055,Active
+MER0003,HomePlus 3,Electronics,CA,0.034,Active
+MER0004,FitLife 4,Fashion,AU,0.033,Active
+MER0005,KitchenKart 5,Electronics,AU,0.04,Active
+MER0006,SmartLiving 6,Home & Garden,US,0.026,Active
+MER0007,SmartLiving 7,Kitchen,UK,0.068,Paused
+MER0008,HomePlus 8,Fashion,AU,0.025,Active
+MER0009,SmartLiving 9,Fashion,CA,0.062,Active
+MER0010,AudioHub 10,Home & Garden,US,0.071,Active
+MER0011,AudioHub 11,Health & Fitness,AU,0.058,Active
+MER0012,SmartLiving 12,Home & Garden,UK,0.033,Active
+MER0013,TravelGear 13,Electronics,CA,0.052,Active
+MER0014,FashionPoint 14,Home & Garden,AU,0.036,Active
+MER0015,TechWorld 15,Kitchen,CA,0.069,Active
+MER0016,AudioHub 16,Health & Fitness,US,0.033,Active
+MER0017,FashionPoint 17,Home & Garden,AU,0.073,Paused
+MER0018,AudioHub 18,Home & Garden,CA,0.035,Active
+MER0019,GadgetZone 19,Fashion,AU,0.042,Active
+MER0020,FashionPoint 20,Fashion,US,0.065,Active
+MER0021,KitchenKart 21,Home & Garden,AU,0.056,Paused
+MER0022,TravelGear 22,Health & Fitness,AU,0.052,Active
+MER0023,BeautyMart 23,Electronics,UK,0.066,Active
+MER0024,AudioHub 24,Electronics,AU,0.029,Active
+MER0025,BeautyMart 25,Kitchen,CA,0.05,Active
+MER0026,BeautyMart 26,Kitchen,CA,0.029,Active
+MER0027,BeautyMart 27,Fashion,US,0.056,Paused
+MER0028,HomePlus 28,Electronics,UK,0.073,Active
+MER0029,TechWorld 29,Home & Garden,CA,0.073,Active
+MER0030,FashionPoint 30,Electronics,US,0.079,Active
+MER0031,FashionPoint 31,Home & Garden,CA,0.036,Paused
+MER0032,BeautyMart 32,Home & Garden,CA,0.063,Paused
+MER0033,FashionPoint 33,Kitchen,AU,0.027,Active
+MER0034,SmartLiving 34,Electronics,US,0.055,Active
+MER0035,FitLife 35,Fashion,US,0.024,Active
+MER0036,HomePlus 36,Home & Garden,US,0.072,Active
+MER0037,FitLife 37,Fashion,UK,0.06,Active
+MER0038,KitchenKart 38,Fashion,AU,0.035,Paused
+MER0039,FitLife 39,Health & Fitness,US,0.026,Paused
+MER0040,GadgetZone 40,Kitchen,AU,0.048,Active
+MER0041,TechWorld 41,Electronics,AU,0.064,Active
+MER0042,FitLife 42,Home & Garden,CA,0.052,Active
+MER0043,KitchenKart 43,Health & Fitness,UK,0.048,Active
+MER0044,BeautyMart 44,Health & Fitness,US,0.023,Active
+MER0045,FitLife 45,Electronics,CA,0.044,Paused
+MER0046,GadgetZone 46,Home & Garden,US,0.03,Active
+MER0047,AudioHub 47,Health & Fitness,AU,0.037,Paused
+MER0048,FitLife 48,Home & Garden,UK,0.033,Active
+MER0049,BeautyMart 49,Fashion,US,0.065,Active
+MER0050,TravelGear 50,Electronics,AU,0.05,Active
+MER0051,BeautyMart 51,Electronics,US,0.071,Active
+MER0052,HomePlus 52,Fashion,CA,0.044,Active
+MER0053,TravelGear 53,Fashion,US,0.057,Paused
+MER0054,TravelGear 54,Fashion,UK,0.076,Active
+MER0055,FitLife 55,Kitchen,UK,0.044,Active
+MER0056,SmartLiving 56,Health & Fitness,US,0.021,Active
+MER0057,BeautyMart 57,Electronics,CA,0.05,Active
+MER0058,HomePlus 58,Kitchen,CA,0.042,Active
+MER0059,BeautyMart 59,Health & Fitness,UK,0.057,Active
+MER0060,AudioHub 60,Fashion,US,0.076,Active
+MER0061,HomePlus 61,Kitchen,US,0.065,Active
+MER0062,AudioHub 62,Kitchen,CA,0.063,Active
+MER0063,BeautyMart 63,Kitchen,AU,0.035,Active
+MER0064,GadgetZone 64,Electronics,UK,0.023,Active
+MER0065,AudioHub 65,Home & Garden,CA,0.064,Paused
+MER0066,TechWorld 66,Fashion,US,0.025,Active
+MER0067,TechWorld 67,Fashion,UK,0.055,Active
+MER0068,KitchenKart 68,Health & Fitness,US,0.038,Active
+MER0069,FitLife 69,Kitchen,CA,0.06,Active
+MER0070,GadgetZone 70,Fashion,CA,0.076,Active
+MER0071,KitchenKart 71,Home & Garden,AU,0.021,Active
+MER0072,FitLife 72,Health & Fitness,UK,0.03,Active
+MER0073,TechWorld 73,Health & Fitness,AU,0.033,Paused
+MER0074,AudioHub 74,Kitchen,CA,0.033,Active
+MER0075,SmartLiving 75,Health & Fitness,UK,0.072,Active
+MER0076,BeautyMart 76,Kitchen,AU,0.061,Active
+MER0077,HomePlus 77,Electronics,UK,0.031,Active
+MER0078,HomePlus 78,Electronics,AU,0.041,Active
+MER0079,TravelGear 79,Health & Fitness,US,0.043,Active
+MER0080,TechWorld 80,Kitchen,AU,0.02,Active
+MER0081,GadgetZone 81,Kitchen,US,0.077,Active
+MER0082,SmartLiving 82,Fashion,US,0.063,Active
+MER0083,AudioHub 83,Fashion,AU,0.04,Active
+MER0084,KitchenKart 84,Fashion,CA,0.045,Paused
+MER0085,TravelGear 85,Home & Garden,UK,0.044,Active
+MER0086,AudioHub 86,Kitchen,CA,0.046,Active
+MER0087,FashionPoint 87,Health & Fitness,AU,0.061,Paused
+MER0088,HomePlus 88,Home & Garden,UK,0.051,Active
+MER0089,FitLife 89,Electronics,UK,0.033,Active
+MER0090,TechWorld 90,Home & Garden,US,0.035,Paused
+MER0091,HomePlus 91,Fashion,AU,0.045,Active
+MER0092,FashionPoint 92,Health & Fitness,AU,0.035,Active
+MER0093,GadgetZone 93,Electronics,CA,0.031,Paused
+MER0094,BeautyMart 94,Electronics,CA,0.075,Active
+MER0095,KitchenKart 95,Health & Fitness,AU,0.06,Active
+MER0096,TravelGear 96,Health & Fitness,AU,0.07,Paused
+MER0097,FashionPoint 97,Home & Garden,AU,0.036,Active
+MER0098,BeautyMart 98,Kitchen,AU,0.058,Active
+MER0099,HomePlus 99,Health & Fitness,UK,0.034,Active
+MER0100,BeautyMart 100,Kitchen,US,0.028,Active

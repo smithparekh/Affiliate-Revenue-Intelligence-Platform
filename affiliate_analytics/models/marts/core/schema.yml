@@ -317,3 +317,40 @@ models:
         description: "Current affiliate status."
         data_tests:
           - not_null
+
+
+  - name: dim_merchant
+    description: "Merchant dimension containing one row per merchant."
+
+    columns:
+      - name: merchant_key
+        description: "Unique warehouse-generated merchant key."
+        data_tests:
+          - not_null
+          - unique
+
+      - name: merchant_id
+        description: "Business identifier for the merchant."
+        data_tests:
+          - not_null
+          - unique
+
+      - name: merchant_name
+        description: "Merchant name."
+        data_tests:
+          - not_null
+
+      - name: merchant_category
+        description: "Merchant business category."
+        data_tests:
+          - not_null
+
+      - name: country
+        description: "Merchant country."
+        data_tests:
+          - not_null
+
+      - name: status
+        description: "Current merchant status."
+        data_tests:
+          - not_null
