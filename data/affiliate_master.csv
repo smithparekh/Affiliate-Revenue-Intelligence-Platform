@@ -1,0 +1,21 @@
+affiliate_id,affiliate_name,affiliate_type,commission_tier,country,status
+AFF001,TechDeals Media,Content,Premium,US,Active
+AFF002,Savings Hub,Coupon,Standard,US,Active
+AFF003,Deal Hunters,Coupon,Premium,CA,Active
+AFF004,Smart Shopper,Content,Standard,UK,Active
+AFF005,CashBack World,Cashback,Premium,US,Active
+AFF006,Daily Discounts,Coupon,Standard,AU,Active
+AFF007,Best Buy Finds,Content,Standard,US,Active
+AFF008,Coupon Central,Coupon,Premium,US,Active
+AFF009,Value Seekers,Content,Standard,CA,Active
+AFF010,The Deal Room,Content,Premium,UK,Active
+AFF011,Savvy Savings,Coupon,Standard,US,Active
+AFF012,Promo Planet,Coupon,Standard,AU,Active
+AFF013,Smart Deals Network,Content,Premium,US,Active
+AFF014,Bargain Finder,Content,Standard,CA,Active
+AFF015,Rewards Radar,Cashback,Premium,US,Active
+AFF016,Deal Matrix,Content,Standard,UK,Active
+AFF017,Discount Daily,Coupon,Standard,US,Active
+AFF018,Shop Smarter,Content,Premium,AU,Active
+AFF019,Coupon Vault,Coupon,Standard,US,Active
+AFF020,Price Drop Watch,Content,Premium,CA,Active

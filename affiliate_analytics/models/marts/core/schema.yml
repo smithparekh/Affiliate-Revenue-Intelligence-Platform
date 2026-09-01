@@ -280,3 +280,40 @@ models:
         description: "Affiliate commission earned from the conversion."
         data_tests:
           - not_null
+
+
+  - name: dim_affiliate
+    description: "Affiliate dimension containing one row per affiliate partner."
+
+    columns:
+      - name: affiliate_key
+        description: "Unique warehouse-generated affiliate key."
+        data_tests:
+          - not_null
+          - unique
+
+      - name: affiliate_id
+        description: "Business identifier for the affiliate."
+        data_tests:
+          - not_null
+          - unique
+
+      - name: affiliate_name
+        description: "Affiliate partner name."
+        data_tests:
+          - not_null
+
+      - name: affiliate_type
+        description: "Type of affiliate partner."
+        data_tests:
+          - not_null
+
+      - name: country
+        description: "Affiliate country."
+        data_tests:
+          - not_null
+
+      - name: status
+        description: "Current affiliate status."
+        data_tests:
+          - not_null
