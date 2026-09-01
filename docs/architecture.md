@@ -98,3 +98,30 @@ Event-level and session-level attributes such as `customer_type`,
 `new_vs_returning`, `device_type`, and `browser` will remain in the
 appropriate fact/event models because their values may vary across
 events and sources.
+
+
+
+## Production-Scale Extension
+
+The public Kaggle dataset is used as the initial source dataset.
+
+Additional synthetic records will be generated to simulate a larger
+affiliate platform while preserving the analytical concepts of the
+public source.
+
+Synthetic event records will explicitly include:
+
+- affiliate_id
+- merchant_id
+- campaign_id
+- customer_id
+- product_id
+- click_id
+- session_id
+- conversion_id
+- event timestamps
+- traffic and attribution attributes
+- revenue and commission measures
+
+Synthetic records will be clearly identified as generated portfolio data
+and will not be represented as real company data.
