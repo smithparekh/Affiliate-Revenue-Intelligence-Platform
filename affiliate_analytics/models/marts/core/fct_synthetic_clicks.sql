@@ -1,0 +1,19 @@
+{{ config(
+    materialized='table'
+) }}
+
+select
+    click_id,
+    affiliate_id,
+    merchant_id,
+    campaign_id,
+    customer_id,
+    session_id,
+    product_id,
+    clicked_at,
+    traffic_source,
+    traffic_medium,
+    device_type,
+    country
+
+from {{ ref('synthetic_affiliate_clicks') }}

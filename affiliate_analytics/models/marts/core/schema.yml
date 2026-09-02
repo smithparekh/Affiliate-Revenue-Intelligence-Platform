@@ -391,3 +391,134 @@ models:
         description: "Current campaign status."
         data_tests:
           - not_null
+
+
+  - name: fct_synthetic_clicks
+    description: "Production-scale synthetic affiliate click fact table. One row represents one affiliate click event."
+
+    columns:
+      - name: click_id
+        description: "Unique synthetic click identifier."
+        data_tests:
+          - not_null
+          - unique
+
+      - name: affiliate_id
+        description: "Affiliate responsible for the click."
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_affiliate')
+                field: affiliate_id
+
+      - name: merchant_id
+        description: "Merchant associated with the click."
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_merchant')
+                field: merchant_id
+
+      - name: campaign_id
+        description: "Campaign associated with the click."
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_campaign')
+                field: campaign_id
+
+      - name: customer_id
+        description: "Customer associated with the click."
+        data_tests:
+          - not_null
+
+      - name: product_id
+        description: "Product associated with the click."
+        data_tests:
+          - not_null
+
+      - name: clicked_at
+        description: "Timestamp of the click event."
+        data_tests:
+          - not_null
+
+
+  - name: fct_synthetic_conversions
+    description: "Production-scale synthetic conversion fact table. One row represents one conversion event."
+
+    columns:
+      - name: conversion_id
+        description: "Unique conversion identifier."
+        data_tests:
+          - not_null
+          - unique
+
+      - name: click_id
+        description: "Click associated with the conversion."
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('fct_synthetic_clicks')
+                field: click_id
+
+      - name: affiliate_id
+        description: "Affiliate associated with the conversion."
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_affiliate')
+                field: affiliate_id
+
+      - name: merchant_id
+        description: "Merchant associated with the conversion."
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_merchant')
+                field: merchant_id
+
+      - name: campaign_id
+        description: "Campaign associated with the conversion."
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_campaign')
+                field: campaign_id
+
+      - name: customer_id
+        description: "Customer associated with the conversion."
+        data_tests:
+          - not_null
+
+      - name: product_id
+        description: "Product associated with the conversion."
+        data_tests:
+          - not_null
+
+      - name: converted_at
+        description: "Timestamp when the conversion occurred."
+        data_tests:
+          - not_null
+
+      - name: order_id
+        description: "Unique order identifier."
+        data_tests:
+          - not_null
+          - unique
+
+      - name: order_value
+        description: "Value of the converted order."
+        data_tests:
+          - not_null
+
+      - name: commission_earned
+        description: "Affiliate commission earned from the order."
+        data_tests:
+          - not_null
