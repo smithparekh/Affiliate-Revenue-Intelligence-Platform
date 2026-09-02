@@ -522,3 +522,28 @@ models:
         description: "Affiliate commission earned from the order."
         data_tests:
           - not_null
+
+
+  - name: mart_overall_funnel
+    description: "Overall affiliate funnel KPI mart."
+
+    columns:
+      - name: total_clicks
+        description: "Total unique affiliate clicks."
+        data_tests:
+          - not_null
+
+      - name: converted_clicks
+        description: "Unique clicks that generated at least one conversion."
+        data_tests:
+          - not_null
+
+      - name: total_conversions
+        description: "Total conversion events."
+        data_tests:
+          - not_null
+
+      - name: click_to_conversion_rate_pct
+        description: "Percentage of unique clicks that generated at least one conversion."
+        data_tests:
+          - not_null
