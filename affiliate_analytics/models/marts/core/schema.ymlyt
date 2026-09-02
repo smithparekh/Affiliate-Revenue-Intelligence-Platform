@@ -559,7 +559,6 @@ models:
               - affiliate_id
               - activity_date
 
-
     columns:
       - name: affiliate_id
         description: "Business identifier of the affiliate."
