@@ -605,3 +605,57 @@ models:
           - not_null
 
 
+
+  - name: mart_merchant_performance
+    description: "Daily merchant performance mart. Grain: one row per merchant per calendar day."
+
+    data_tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns:
+              - merchant_id
+              - activity_date
+
+    columns:
+      - name: merchant_id
+        description: "Business identifier of the merchant."
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_merchant')
+                field: merchant_id
+
+      - name: merchant_key
+        description: "Warehouse-generated merchant key."
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_merchant')
+                field: merchant_key
+
+      - name: activity_date
+        description: "Calendar date of merchant activity."
+        data_tests:
+          - not_null
+
+      - name: clicks
+        description: "Number of unique clicks generated for the merchant on the date."
+        data_tests:
+          - not_null
+
+      - name: conversions
+        description: "Number of conversion events generated for the merchant on the date."
+        data_tests:
+          - not_null
+
+      - name: order_value
+        description: "Total order value generated for the merchant on the date."
+        data_tests:
+          - not_null
+
+      - name: commission_earned
+        description: "Total commission generated for the merchant on the date."
+        data_tests:
+          - not_null
