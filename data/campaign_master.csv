@@ -1,0 +1,51 @@
+campaign_id,campaign_name,campaign_type,channel,start_date,status
+CAMP0001,Tech Savings 1,Seasonal,Email,2024-01-01,Active
+CAMP0002,Kitchen Specials 2,Flash Sale,Search,2024-01-01,Active
+CAMP0003,Best Sellers 3,Clearance,Search,2024-01-01,Active
+CAMP0004,Tech Savings 4,Flash Sale,Social,2024-01-01,Active
+CAMP0005,Weekend Offers 5,Flash Sale,Content,2024-01-01,Paused
+CAMP0006,Kitchen Specials 6,Clearance,Content,2024-01-01,Active
+CAMP0007,Winter Deals 7,Flash Sale,Affiliate,2024-01-01,Active
+CAMP0008,Fitness Deals 8,Flash Sale,Social,2024-01-01,Active
+CAMP0009,Tech Savings 9,Seasonal,Affiliate,2024-01-01,Active
+CAMP0010,Holiday Offers 10,Evergreen,Content,2024-01-01,Active
+CAMP0011,Winter Deals 11,Clearance,Content,2024-01-01,Active
+CAMP0012,Summer Sale 12,Seasonal,Content,2024-01-01,Active
+CAMP0013,Best Sellers 13,Evergreen,Content,2024-01-01,Active
+CAMP0014,Tech Savings 14,Seasonal,Social,2024-01-01,Active
+CAMP0015,Tech Savings 15,Flash Sale,Search,2024-01-01,Paused
+CAMP0016,Fitness Deals 16,Clearance,Email,2024-01-01,Active
+CAMP0017,Holiday Offers 17,Evergreen,Social,2024-01-01,Active
+CAMP0018,Tech Savings 18,Product Launch,Social,2024-01-01,Active
+CAMP0019,Home Essentials 19,Clearance,Affiliate,2024-01-01,Active
+CAMP0020,Weekend Offers 20,Flash Sale,Email,2024-01-01,Active
+CAMP0021,Kitchen Specials 21,Seasonal,Email,2024-01-01,Paused
+CAMP0022,Fitness Deals 22,Seasonal,Social,2024-01-01,Active
+CAMP0023,Kitchen Specials 23,Clearance,Affiliate,2024-01-01,Paused
+CAMP0024,Home Essentials 24,Evergreen,Social,2024-01-01,Active
+CAMP0025,Weekend Offers 25,Product Launch,Email,2024-01-01,Paused
+CAMP0026,Best Sellers 26,Clearance,Email,2024-01-01,Active
+CAMP0027,Home Essentials 27,Product Launch,Affiliate,2024-01-01,Active
+CAMP0028,Winter Deals 28,Seasonal,Social,2024-01-01,Active
+CAMP0029,Summer Sale 29,Product Launch,Search,2024-01-01,Paused
+CAMP0030,Summer Sale 30,Product Launch,Affiliate,2024-01-01,Active
+CAMP0031,Weekend Offers 31,Seasonal,Search,2024-01-01,Active
+CAMP0032,Holiday Offers 32,Seasonal,Email,2024-01-01,Paused
+CAMP0033,Home Essentials 33,Clearance,Search,2024-01-01,Active
+CAMP0034,Weekend Offers 34,Flash Sale,Content,2024-01-01,Active
+CAMP0035,Fitness Deals 35,Product Launch,Content,2024-01-01,Active
+CAMP0036,Home Essentials 36,Evergreen,Social,2024-01-01,Active
+CAMP0037,Best Sellers 37,Evergreen,Affiliate,2024-01-01,Active
+CAMP0038,Tech Savings 38,Evergreen,Email,2024-01-01,Active
+CAMP0039,Winter Deals 39,Flash Sale,Content,2024-01-01,Active
+CAMP0040,Tech Savings 40,Clearance,Search,2024-01-01,Active
+CAMP0041,Home Essentials 41,Clearance,Content,2024-01-01,Active
+CAMP0042,Fitness Deals 42,Product Launch,Content,2024-01-01,Paused
+CAMP0043,Kitchen Specials 43,Product Launch,Social,2024-01-01,Active
+CAMP0044,Summer Sale 44,Evergreen,Affiliate,2024-01-01,Paused
+CAMP0045,Tech Savings 45,Flash Sale,Social,2024-01-01,Active
+CAMP0046,Holiday Offers 46,Seasonal,Content,2024-01-01,Active
+CAMP0047,Best Sellers 47,Flash Sale,Search,2024-01-01,Active
+CAMP0048,Winter Deals 48,Flash Sale,Search,2024-01-01,Active
+CAMP0049,Holiday Offers 49,Seasonal,Content,2024-01-01,Active
+CAMP0050,Fitness Deals 50,Clearance,Social,2024-01-01,Active

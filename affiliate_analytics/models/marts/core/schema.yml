@@ -354,3 +354,40 @@ models:
         description: "Current merchant status."
         data_tests:
           - not_null
+
+
+  - name: dim_campaign
+    description: "Campaign dimension containing one row per marketing campaign."
+
+    columns:
+      - name: campaign_key
+        description: "Unique warehouse-generated campaign key."
+        data_tests:
+          - not_null
+          - unique
+
+      - name: campaign_id
+        description: "Business identifier for the campaign."
+        data_tests:
+          - not_null
+          - unique
+
+      - name: campaign_name
+        description: "Campaign name."
+        data_tests:
+          - not_null
+
+      - name: campaign_type
+        description: "Type of marketing campaign."
+        data_tests:
+          - not_null
+
+      - name: channel
+        description: "Primary campaign channel."
+        data_tests:
+          - not_null
+
+      - name: status
+        description: "Current campaign status."
+        data_tests:
+          - not_null
