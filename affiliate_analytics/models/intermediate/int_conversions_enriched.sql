@@ -5,7 +5,10 @@
 select
     f.conversion_id,
     f.click_id,
+
     c.customer_key,
+    c.customer_id,
+
     f.user_id,
     f.order_id,
     f.converted_at,
@@ -33,7 +36,7 @@ select
 from {{ ref('fct_conversions') }} f
 
 left join {{ ref('dim_customer') }} c
-    on f.user_id = c.user_id
+    on f.user_id = c.customer_id
 
 left join {{ ref('dim_product') }} p
     on f.source_asin = p.source_asin

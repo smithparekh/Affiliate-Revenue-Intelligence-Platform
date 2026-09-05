@@ -2,27 +2,58 @@
     materialized='table'
 ) }}
 
-with all_users as (
+with public_customers as (
 
-    select user_id
+    select
+        user_id as customer_id,
+        'PUBLIC' as customer_source
     from {{ ref('amazon_affiliate_clicks') }}
 
     union
 
-    select user_id
+    select
+        user_id as customer_id,
+        'PUBLIC' as customer_source
     from {{ ref('amazon_affiliate_conversions') }}
 
     union
 
-    select user_id
+    select
+        user_id as customer_id,
+        'PUBLIC' as customer_source
     from {{ ref('user_behavior_analytics') }}
 
 ),
 
-clicks as (
+synthetic_customers as (
 
     select
-        user_id,
+        customer_id,
+        'SYNTHETIC' as customer_source
+    from {{ ref('synthetic_customer_master') }}
+
+),
+
+all_customers as (
+
+    select
+        customer_id,
+        customer_source
+    from public_customers
+
+    union
+
+    select
+        customer_id,
+        customer_source
+    from synthetic_customers
+
+),
+
+public_click_activity as (
+
+    select
+        user_id as customer_id,
         min(timestamp) as first_click_at,
         max(timestamp) as last_click_at
     from {{ ref('amazon_affiliate_clicks') }}
@@ -30,10 +61,10 @@ clicks as (
 
 ),
 
-conversions as (
+public_conversion_activity as (
 
     select
-        user_id,
+        user_id as customer_id,
         max(customer_lifetime_value) as customer_lifetime_value,
         max(previous_orders_count) as previous_orders_count,
         min(timestamp) as first_conversion_at,
@@ -46,7 +77,8 @@ conversions as (
 customer_records as (
 
     select
-        u.user_id,
+        a.customer_id,
+        a.customer_source,
 
         coalesce(
             c.first_click_at,
@@ -61,13 +93,13 @@ customer_records as (
         v.customer_lifetime_value,
         v.previous_orders_count
 
-    from all_users u
+    from all_customers a
 
-    left join clicks c
-        on u.user_id = c.user_id
+    left join public_click_activity c
+        on a.customer_id = c.customer_id
 
-    left join conversions v
-        on u.user_id = v.user_id
+    left join public_conversion_activity v
+        on a.customer_id = v.customer_id
 
 ),
 
@@ -75,10 +107,11 @@ final as (
 
     select
         row_number() over (
-            order by user_id
+            order by customer_source, customer_id
         ) as customer_key,
 
-        user_id,
+        customer_id,
+        customer_source,
         first_seen_at,
         last_seen_at,
         customer_lifetime_value,

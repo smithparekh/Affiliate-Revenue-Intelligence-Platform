@@ -1,5 +1,7 @@
 {{ config(
-    materialized='table'
+    materialized='incremental',
+    unique_key='conversion_id',
+    incremental_strategy='merge'
 ) }}
 
 select
@@ -21,3 +23,12 @@ select
     return_status
 
 from {{ ref('synthetic_affiliate_conversions') }}
+
+{% if is_incremental() %}
+
+where converted_at > (
+    select coalesce(max(converted_at), '1900-01-01'::timestamp)
+    from {{ this }}
+)
+
+{% endif %}

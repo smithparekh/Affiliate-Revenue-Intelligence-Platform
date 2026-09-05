@@ -79,8 +79,9 @@ models:
         description: "Affiliate click associated with the conversion. Null when the source conversion has no click attribution."
         data_tests:
           - relationships:
-              to: ref('fct_clicks')
-              field: click_id
+              arguments:
+                to: ref('fct_clicks')
+                field: click_id
 
       - name: user_id
         description: "User associated with the conversion."
@@ -146,7 +147,7 @@ models:
 
     
   - name: dim_customer
-    description: "Customer dimension containing one row per unique user across all source systems."
+    description: "Customer dimension containing one row per unique customer across public and synthetic source systems."
 
     columns:
       - name: customer_key
@@ -155,14 +156,14 @@ models:
           - not_null
           - unique
 
-      - name: user_id
-        description: "Business identifier for the customer."
+      - name: customer_id
+        description: "Canonical customer business identifier."
         data_tests:
           - not_null
           - unique
 
-      - name: first_seen_at
-        description: "Earliest known customer activity timestamp."
+      - name: customer_source
+        description: "Origin of the customer record: PUBLIC or SYNTHETIC."
         data_tests:
           - not_null
 
@@ -170,6 +171,7 @@ models:
         description: "Most recent known customer activity timestamp."
         data_tests:
           - not_null
+    
 
 
   - name: dim_date
