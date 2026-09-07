@@ -98,7 +98,13 @@ The analytics layer is designed to answer questions such as:
                              │
                              ▼
                   BI / Analytics Consumption
-dbt Model Flow
+
+### Architecture Diagram
+
+![Affiliate Revenue Intelligence Platform Architecture](docs/architecture-diagram.png)
+
+
+### dbt Model Flow
 Seeds
   │
   ├── dim_product
