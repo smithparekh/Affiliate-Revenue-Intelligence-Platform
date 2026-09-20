@@ -6,6 +6,9 @@ into tested, documented, business-ready analytics models using **Snowflake,
 dbt, SQL, Python, and Git**.
 
 ---
+## 🚀 Live Dashboard
+
+👉 [**Open the Live Metabase Dashboard**](https://pulsed-loach.metabaseapp.com/public/dashboard/74056375-e4c3-45ac-8b29-3c43f922b3e8)
 
 ## Project Overview
 
