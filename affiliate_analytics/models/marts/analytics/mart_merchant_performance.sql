@@ -2,60 +2,58 @@
     materialized='table'
 ) }}
 
-with clicks as (
+with merchant_activity as (
 
     select
-        merchant_id,
-        to_date(clicked_at) as activity_date,
-        count(distinct click_id) as clicks
-    from {{ ref('fct_synthetic_clicks') }}
-    group by
-        merchant_id,
-        to_date(clicked_at)
+        c.merchant_id,
+        c.click_id,
+        to_date(c.clicked_at) as activity_date,
+        v.conversion_id,
+        v.order_value,
+        v.commission_earned
+
+    from {{ ref('fct_synthetic_clicks') }} c
+
+    left join {{ ref('fct_synthetic_conversions') }} v
+        on c.click_id = v.click_id
 
 ),
 
-conversions as (
+aggregated as (
 
     select
         merchant_id,
-        to_date(converted_at) as activity_date,
+        activity_date,
+
+        count(distinct click_id) as clicks,
+
         count(distinct conversion_id) as conversions,
-        count(distinct click_id) as converted_clicks,
-        sum(order_value) as order_value,
-        sum(commission_earned) as commission_earned
-    from {{ ref('fct_synthetic_conversions') }}
+
+        coalesce(sum(order_value), 0) as order_value,
+
+        coalesce(sum(commission_earned), 0) as commission_earned
+
+    from merchant_activity
+
     group by
         merchant_id,
-        to_date(converted_at)
+        activity_date
 
 )
 
 select
-    c.merchant_id,
-    m.merchant_key,
-    m.merchant_name,
-    m.merchant_category,
-    c.activity_date,
+    a.merchant_id,
+    d.merchant_key,
+    d.merchant_name,
+    d.merchant_category,
+    a.activity_date,
 
-    c.clicks,
+    a.clicks,
+    a.conversions,
+    a.order_value,
+    a.commission_earned
 
-    coalesce(v.converted_clicks, 0) as converted_clicks,
-    coalesce(v.conversions, 0) as conversions,
-    coalesce(v.order_value, 0) as order_value,
-    coalesce(v.commission_earned, 0) as commission_earned,
+from aggregated a
 
-    round(
-        coalesce(v.converted_clicks, 0)
-        / nullif(c.clicks, 0) * 100,
-        2
-    ) as conversion_rate_pct
-
-from clicks c
-
-left join conversions v
-    on c.merchant_id = v.merchant_id
-   and c.activity_date = v.activity_date
-
-left join {{ ref('dim_merchant') }} m
-    on c.merchant_id = m.merchant_id
+left join {{ ref('dim_merchant') }} d
+    on a.merchant_id = d.merchant_id
